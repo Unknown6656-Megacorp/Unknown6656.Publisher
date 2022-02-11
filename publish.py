@@ -63,7 +63,7 @@ print('(re-)building the project ...')
 run_command(['dotnet', 'build'])
 run_command(['dotnet', 'pack'])
 
-files = [f for f in Path(caller_dir).rglob(f'*.{version}.nupkg')]
+files = [f for f in Path(caller_dir).rglob(f'Unknown6656.*.{version}.nupkg')]
 
 print(caller_dir)
 
