@@ -1,6 +1,6 @@
 @echo off
     SETLOCAL ENABLEDELAYEDEXPANSION
-    FOR %%p IN (.,pub,publish,Unknown6656.Publisher,../Unknown6656.Publisher) DO (
+    FOR %%p IN (.,pub,publish,Unknown6656.Publisher,../Unknown6656.Publisher,../../Unknown6656.Publisher) DO (
         SET _pyfile="%%p/publish.py"
         ECHO looking for python script inside %%p ...
         IF EXIST "!_pyfile!" (
@@ -17,7 +17,9 @@
     ECHO     - publish/
     ECHO     - Unknown6656.Publisher/
     ECHO     - ../Unknown6656.Publisher/
+    ECHO     - ../../Unknown6656.Publisher/
     ECHO Please clone 'https://github.com/Unknown6656-Megacorp/Unknown6656.Publisher' into the current or corresponding directoy.
+    ECHO Note that you'll have to create and adapt the file 'secrets.py' to contain the publisher API key.
 
 :success
     SET "_pyfile="
